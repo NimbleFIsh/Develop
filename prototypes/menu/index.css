@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  transition: all ease 1s;
+}
+
+ul {
+  margin-top: 60px;
+  font-size: larger;
+  list-style: none;
+  padding-left: 0;
+}
+
+.burger {
+  border: none;
+  box-shadow: none;
+  font-size: 0;
+  height: 60px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+}
+
+.burger:focus {
+  outline: none;
+}
+
+.burger span {
+  background: #fff;
+  height: 5px;
+  left: 12px;
+  position: absolute;
+  right: 12px;
+  top: 25px;
+}
+
+.burger span::before, .burger span::after {
+  background: #fff;
+  content: '';
+  height: 5px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.burger span::before {
+  top: -12px;
+}
+
+.burger span::after {
+  bottom: -12px;
+}
+
+.burger-lg {
+  background: red;
+}
+
+.burger-lg span {
+  transition: background 0s 0.3s;
+}
+
+.burger-lg span::before, .burger-lg span::after {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+}
+
+.burger-lg span::before {
+  transition-property: top, transform;
+}
+
+.burger-lg span::after {
+  transition-property: bottom, transform;
+}
+
+.burger-lg.active {
+  background: green;
+}
+
+.burger-lg.active span {
+  background: none;
+}
+
+.burger-lg.active span::before {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.burger-lg.active span::after {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+.burger-lg.active span::before, .burger-lg.active span::after {
+  transition-delay: 0s, 0.3s;
+}
+
+#menu {
+  width: 200px;
+  margin-left: -140px;
+  background: rgba(173, 0, 255, 0.71);
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  transition: all ease 1s;
+  z-index: 100000;
+  padding-top: 15px;
+  padding-left: 25px;
+  padding-right: 60px;
+}
+
+#menu.nav_active {
+  margin-left: 0;
+}
+
+.body_container {
+  width: 80%;
+  min-width: 1000px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.body_active {
+  margin-left: 264px;
+}
