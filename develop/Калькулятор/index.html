@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Грузоперевозка</title>
+  </head>
+  <body>
+    <div id="content">
+      <h1>Заявка на перевозку груза</h1>
+      <form id="mainForm" action="" method="POST">
+        <div class="step_1">
+          <div class="step_text">Данные о грузе:</div>
+          <div class="step_content">
+            <div class="step_content_menu_container">
+              <ul class="step_content_menu_list">
+                <li class="step_content_menu_item">
+                  <div id="menu_item_1" class="step_content_menu_item_content active">Указать общий вес/объем</div>
+                </li>
+                <li class="step_content_menu_item">
+                  <div id="menu_item_2" class="step_content_menu_item_content">Указать с габаритами</div>
+                </li>
+              </ul>
+              <div class="step_content_menu_question">
+                <div class="question_info">Укажите общие параметры груза, чтобы получить быстрый расчет.</br>Для точного расчета стоимости перевозки и дополнительных услуг заполните габариты каждого грузового места.</div>
+              </div>
+            </div>
+
+            <div class="step_content_calc">
+              <div class="step_content_calc_1">
+                <div class="calc_1_container">
+                  <label for="calc_1_w">Общий вес, кг</label>
+                  <input id="calc_1_w" class="input_calc_1" type="number" name="w" maxlength="5" value="1" placeholder="кг" required>
+                </div>
+                <div class="calc_1_container">
+                  <label for="calc_1_v">Общий объем, м³</label>
+                  <input id="calc_1_v" class="input_calc_1" type="number" name="v" maxlength="3" value="0.01" placeholder="м³" required>
+                </div>
+                <div class="calc_1_container">
+                  <label for="calc_1_l">Макс. габарит, м</label>
+                  <input id="calc_1_l" class="input_calc_1" type="number" name="l" maxlength="8" value="0.1" placeholder="м" required>
+                </div>
+                <div class="count">
+                  <label for="count_number">Кол-во мест</label>
+                  <div class="count_container">
+                    <button type="button" name="count_L"></button>
+                    <div class="">
+                      <input id="count_number" type="number" name="" value="1">
+                    </div>
+                    <button type="button" name="count_R"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="I:/lib/JS/JQuery/jquery-3.4.1.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
