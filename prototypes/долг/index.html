@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Долги</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <form action="main.js" method="POST" id="credit_container">
+      <label for="credit_all">Общая сумма кредита:</label>
+      <input id="credit_all" type="number" name="all" placeholder="">
+
+      <label for="credit_pay">Оплачено:</label>
+      <input id="credit_pay" type="number" name="pred_pay" placeholder="">
+
+      <label for="creadit_procent">Процентная ставка:</label>
+      <input id="creadit_procent" type="number" name="procent" placeholder="">
+
+      <label for="creadit_date">Срок кредита (в месяцах):</label>
+      <input id="creadit_date" type="number" name="date" placeholder="">
+
+      <button id="credit_button" type="button" name="button">Рассчёт</button>
+    </form>
+
+    <div id="credit_result">
+      <div><span>Общая выплата: </span><span id="credit_result_all"><span></div>
+      <div><span>Переплата: </span><span id="credit_result_pay"></span></div>
+    </div>
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="system.js"></script>
+  </body>
+</html>
