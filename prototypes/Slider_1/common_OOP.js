@@ -40,7 +40,7 @@ function currentSlide(n) {
 function showSlides(n) {
   //Ошибка
   new Color(1);
-  //Ошибка common_OOP.js:41 Uncaught ReferenceError: Cannot access 'Color' before initialization common_OOP.js:41
+  //Ошибка Uncaught ReferenceError: Cannot access 'Color' before initialization common_OOP.js:41
   //  at showSlides (common_OOP.js:41)
   //  at common_OOP.js:4
   let i;
